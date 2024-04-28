@@ -25,8 +25,7 @@ LINKS = (
 
 # Social widget
 SOCIAL = (
-    ("You can add links in your config file", "#"),
-    ("Another social link", "#"),
+    ("github", "https://github.com/YemeniTechNYC"),
 )
 
 DEFAULT_PAGINATION = False
