@@ -1,5 +1,5 @@
 AUTHOR = 'salah ahmed'
-SITENAME = 'yemenisintech.org'
+SITENAME = 'yemenis in tech'
 SITEURL = ""
 
 PATH = "content"
