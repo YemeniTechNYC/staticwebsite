@@ -8,7 +8,7 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-S3_BUCKET=www.yemenisintech.org
+S3_BUCKET=yemenisintech.org
 
 
 DEBUG ?= 0
