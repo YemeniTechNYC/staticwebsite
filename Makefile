@@ -1,6 +1,6 @@
 PY?=
 PELICAN?=pelican
-PELICANOPTS=
+PELICANOPTS=-t=./themes/hyde
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
