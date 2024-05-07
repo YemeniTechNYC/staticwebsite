@@ -13,24 +13,27 @@ jobs:
     steps:
       - name: clone the repository
         uses: actions/checkout@v3
-      - name: clone the theme
+      - name: clone themes
         uses: actions/checkout@v3
         with:
           repository: getpelican/pelican-themes
           path: themes
+      - name: install python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: install pelican
+        run: |
+          python -m pip install -U pip
+          python -m pip install pelican[markdown]
+          pelican-themes -i ./themes/hyde --verbose
+          pelican-themes -l
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1.7.0
         with:
           role-to-assume: arn:aws:iam::767398092744:role/gha_update_blog
           role-session-name: gha_deploy_static
           aws-region: "us-east-1"
-      - name: install python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: install pelican
-        run: |
-          python -m pip install pelican[markdown]
       - name: publish
         run: |
           make clean
