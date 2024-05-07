@@ -38,4 +38,5 @@ jobs:
         run: |
           make clean
           make publish
+          ls -l ./output/
           make s3_upload
