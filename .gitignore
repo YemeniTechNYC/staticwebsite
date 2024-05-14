@@ -1,3 +1,4 @@
 output/
 __pycache__/
 themes/
+.envrc
