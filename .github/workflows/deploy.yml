@@ -27,7 +27,6 @@ jobs:
           python -m pip install -U pip
           python -m pip install pelican[markdown]
           pelican-themes -i ./hyde --verbose
-          pelican-themes -l
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1.7.0
         with:
@@ -37,5 +36,4 @@ jobs:
       - name: publish
         run: |
           make clean
-          make publish
-          ls -l ./output/
+          make s3_upload
